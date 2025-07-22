@@ -1,3 +1,167 @@
-#heading {
-    color : red;
+
+
+.logo-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+.Header {
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content:space-between;
+  border: 1px solid black;
+}
+.nav-Items {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 60px;
+}
+
+.nav-Items li {
+  flex: 0 0 100px;
+  margin: 5px;
+  padding: 0px 6px;
+  font-size: large;
+  text-align: center;
+}
+
+
+.res-card {
+    padding: 10px;
+    width: 200px;
+    height: 300px;
+     /* border: 1px solid black; */
+}
+
+.res-card:hover{
+    border: 1px solid black;
+    cursor: pointer;
+}
+.res-contanier {
+    display: flex;
+    flex-wrap: wrap;
+    gap :20;
+    justify-content: space-around;
+    padding: 20px 60px;
+    margin: 2px 7px;
+}
+.search {
+    padding: 10px;
+}
+
+.res-logo {
+  width: 200px;
+  height: 200px;
+  object-fit: cover; 
+}
+
+.res-card-elem {
+    padding: 6px 6px;
+}
+
+.res-card-elem h3,
+.res-card-elem h4 {
+  margin: 4px 0;
+  font-size: 13px;
+}
+
+.res-container-holder {
+  display: contents;
+}
+
+.filter-btn {
+  margin: 10px;
+  cursor: pointer;
+}
+
+.shimmer-card {
+  padding: 10px;
+  width: 200px;
+  height: 300px;
+  margin : 20px;
+  background-color: #f0f0f0;
+}
+
+.shimmer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.login-btn {
+  padding: 0 20px;
+}
+
+
+
+
+
+/* Container */
+.menu {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 24px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Titles and headings */
+.menu__title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.menu__cuisines,
+.menu__cost {
+    font-size: 18px;
+    color: #555;
+    margin: 4px 0;
+}
+
+.menu__heading {
+    font-size: 24px;
+    margin-top: 24px;
+    color: #333;
+    border-bottom: 2px solid #f07167;
+    padding-bottom: 6px;
+}
+
+/* Menu list */
+.menu__list {
+    list-style: none;
+    padding: 0;
+    margin-top: 16px;
+}
+
+/* Menu items */
+.menu__item {
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    background-color: #fff5f0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.menu__item:hover {
+    background-color: #ffe5dc;
+}
+
+.menu__item-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: #444;
+}
+
+.menu__item-price {
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
 }

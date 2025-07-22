@@ -1,0 +1,35 @@
+{
+  "name": "namastedev",
+  "version": "1.0.0",
+  "description": "Namaste react by everyone",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ritikbhatt22/namaste-react.git"
+  },
+  "keywords": [
+    "react",
+    "ritik"
+  ],
+  "author": "ritik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ritikbhatt22/namaste-react/issues"
+  },
+  "homepage": "https://github.com/Ritikbhatt22/namaste-react#readme",
+  "devDependencies": {
+    "parcel": "^2.15.4"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^6.30.1"
+  },
+  "browsersList": [
+    "last 2 versions"
+  ]
+}
