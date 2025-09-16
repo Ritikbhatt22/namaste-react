@@ -81,21 +81,44 @@ Footer
 */
 
 
-import React from 'react';
+import React,{lazy, Suspense, useEffect, useState} from 'react';
 import ReactDOM from 'react-dom/client';
 import Body from './components/Body';
 import Header from './components/Header';
 import { createBrowserRouter, RouterProvider, Outlet   } from 'react-router-dom';
-import About from './components/About';
+// import About from './components/About';
 import Contact from './components/Contact';
 import Error from './components/Error';
 import ResturantMenu from './components/ResturantMenu';
+import ChipsInput from "./components/ChipsInput";
+import Shimmer from './components/Shimmer';
+import UserContextT from './utils/UserContextT';
+import {Provider} from 'react-redux';
+import appStore from './utils/appStore';
+import Cart from './components/Cart';
+// import Grocery from './components/Grocery';
+
+const Grocery = lazy(() => import("./components/Grocery"));
+const About = lazy(()=> import("./components/About"));
 const AppLayout = () =>{
+  const [userInfo, setUserInfo] = useState("");
+  
+  useEffect(()=>{
+    const data = {
+      name : "Ritik Bhatt"
+
+    }
+    setUserInfo(data.name);
+  },[])
     return (
-        <div className = "app">
-            <Header/>
-            <Outlet/>
-        </div>
+      <Provider store ={appStore}>
+        <UserContextT.Provider value ={{loggedInUser : userInfo, setUserInfo}}>
+          <div className = "app">
+              <Header/>
+              <Outlet/>
+          </div>
+        </UserContextT.Provider>
+      </Provider>
     )
 }
 
@@ -110,7 +133,7 @@ const appRouter = createBrowserRouter([
         },
         {
           path : '/about',
-          element : <About />
+          element : <Suspense fallback ={<h1>Loading...</h1>}><About /></Suspense>
         },
         {
           path : '/contact',
@@ -119,6 +142,18 @@ const appRouter = createBrowserRouter([
         {
           path : '/resturant/:resID',
           element : <ResturantMenu />
+        },
+        {
+          path : '/ChipsInput',
+          element : <ChipsInput />
+        },
+        {
+          path : '/grossary',
+          element :<Suspense fallback = {<h1>Loading.....</h1>}> <Grocery/></Suspense>
+        }, 
+        {
+          path : '/cart',
+          element : <Cart />
         },
     ],
     errorElement : <Error/>

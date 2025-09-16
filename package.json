@@ -22,12 +22,16 @@
   },
   "homepage": "https://github.com/Ritikbhatt22/namaste-react#readme",
   "devDependencies": {
-    "parcel": "^2.15.4"
+    "parcel": "^2.14.4"
   },
   "dependencies": {
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-router-dom": "^6.30.1"
+    "@reduxjs/toolkit": "^2.8.2",
+    "@tailwindcss/postcss": "^4.1.11",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^6.30.1",
+    "redux": "^5.0.1"
   },
   "browsersList": [
     "last 2 versions"
